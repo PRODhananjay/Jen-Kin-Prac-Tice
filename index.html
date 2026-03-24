@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Page Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #111;
+      padding: 15px 50px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h2 {
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    section {
+      padding: 100px 50px;
+      min-height: 100vh;
+    }
+
+    #home {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #home h1 {
+      font-size: 48px;
+    }
+
+    #about {
+      background: #f4f4f4;
+    }
+
+    #services {
+      background: #ddd;
+    }
+
+    #contact {
+      background: #333;
+      color: #fff;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background: #fff;
+      color: #000;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2>MySite</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home">
+  <div>
+    <h1>Welcome to My Website</h1>
+    <p>Simple Single Page Website using HTML, CSS, JS</p>
+    <button class="btn" onclick="scrollToSection('about')">Explore</button>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>This is a simple single page website example.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="card">Web Development</div>
+  <div class="card">UI/UX Design</div>
+  <div class="card">SEO Optimization</div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: example@email.com</p>
+</section>
+
+<footer>
+  <p>© 2026 MySite. All rights reserved.</p>
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
